@@ -28,7 +28,7 @@ final class ConsoleIO {
     func getInput() -> String {
         let keyboard = FileHandle.standardInput
         let inputData = keyboard.availableData
-        let strData = String(data: inputData, encoding: String.Encoding.utf8)!
+        let strData = String(data: inputData, encoding: String.Encoding.utf8) ?? "Ошибка"
         return strData.trimmingCharacters(in: CharacterSet.newlines)
     }
 }

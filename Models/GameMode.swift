@@ -43,22 +43,34 @@ extension GameMode {
         }
     }
 
-    mutating func next() -> Self {
+    mutating func next() {
         switch self {
         case .name1:
-            return .ships1
+            self = .ships1
         case .ships1:
-            return .name2
+            self = .name2
         case .name2:
-            return .ships2
+            self = .ships2
         case .ships2:
-            return .player1
+            self = .player1
         case .player1:
-            return .player2
+            self = .player2
         case .player2:
-            return .victory
+            self = .victory
         case .victory:
-            return .victory
+            self = .victory
         }
+    }
+
+    mutating func setPlayer1() {
+        self = .player1
+    }
+
+    mutating func setPlayer2() {
+        self = .player2
+    }
+
+    mutating func setVictory() {
+        self = .victory
     }
 }
