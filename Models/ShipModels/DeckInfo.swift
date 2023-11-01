@@ -5,7 +5,7 @@
 //  Created by m.grebenozhko on 31.10.2023.
 //
 
-struct DeckInfo {
+final class DeckInfo {
 
     let location: Dimensions
     var status: DeckStatus = .normal

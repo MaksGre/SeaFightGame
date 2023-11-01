@@ -66,10 +66,6 @@ extension GameMode {
         self = .player1
     }
 
-    mutating func setPlayer2() {
-        self = .player2
-    }
-
     mutating func setVictory() {
         self = .victory
     }

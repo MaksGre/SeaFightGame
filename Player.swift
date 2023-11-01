@@ -32,7 +32,6 @@ final class Player {
         }
         if !ships.isEmpty {
             for deck in newShipDeckInfo {
-                print("--- unit1 \(deck.location.unit1) unit2 \(deck.location.unit2)")
                 guard checkLocationIsNotBusy(deck.location) else { return false }
             }
         }
@@ -41,12 +40,18 @@ final class Player {
         return true
     }
 
-    func checkLocationIsNotBusy(_ location: Dimensions) -> Bool {
+    func checkLocationIsNotBusy(_ location: Dimensions, markLocation: Bool = false) -> Bool {
         let shipsDeckInfo = ships.flatMap { $0.deckInfo }
         for deck in shipsDeckInfo {
-            print("--- location.unit1 \(deck.location.unit1) unit2 \(deck.location.unit2)")
-            if deck.location.unit1 == location.unit1 && deck.location.unit2 == location.unit2 { return false }
+            if deck.location.unit1 == location.unit1 && deck.location.unit2 == location.unit2 {
+                if markLocation { deck.status = .underFire }
+                return false
+            }
         }
         return true
+    }
+
+    func checkDeckUnderFire(location: Dimensions) -> Bool {
+        !checkLocationIsNotBusy(location, markLocation: true)
     }
 }
