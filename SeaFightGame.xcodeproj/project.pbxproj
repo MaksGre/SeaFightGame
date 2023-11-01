@@ -10,12 +10,14 @@
 		8074867D2AEE121A00DDBBDE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8074867C2AEE121A00DDBBDE /* main.swift */; };
 		807486842AEE141500DDBBDE /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486832AEE141500DDBBDE /* ConsoleIO.swift */; };
 		807486862AEE16FE00DDBBDE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486852AEE16FE00DDBBDE /* Game.swift */; };
-		807486A12AF0AA3100DDBBDE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486A02AF0AA3100DDBBDE /* Models.swift */; };
+		807486A12AF0AA3100DDBBDE /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486A02AF0AA3100DDBBDE /* GameMode.swift */; };
 		807486A42AF0EF2000DDBBDE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486A32AF0EF2000DDBBDE /* Player.swift */; };
 		807486A62AF0EF6E00DDBBDE /* ShipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486A52AF0EF6E00DDBBDE /* ShipType.swift */; };
 		807486A82AF0EFA300DDBBDE /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486A72AF0EFA300DDBBDE /* Ship.swift */; };
 		807486AA2AF0F10E00DDBBDE /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486A92AF0F10E00DDBBDE /* Field.swift */; };
 		807486AC2AF0F1B500DDBBDE /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486AB2AF0F1B500DDBBDE /* Dimensions.swift */; };
+		807486AE2AF13ECA00DDBBDE /* DeckInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486AD2AF13EC900DDBBDE /* DeckInfo.swift */; };
+		807486B02AF13F8400DDBBDE /* DeckStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807486AF2AF13F8400DDBBDE /* DeckStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,12 +37,14 @@
 		8074867C2AEE121A00DDBBDE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		807486832AEE141500DDBBDE /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		807486852AEE16FE00DDBBDE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		807486A02AF0AA3100DDBBDE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		807486A02AF0AA3100DDBBDE /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		807486A32AF0EF2000DDBBDE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		807486A52AF0EF6E00DDBBDE /* ShipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipType.swift; sourceTree = "<group>"; };
 		807486A72AF0EFA300DDBBDE /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		807486A92AF0F10E00DDBBDE /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		807486AB2AF0F1B500DDBBDE /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		807486AD2AF13EC900DDBBDE /* DeckInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckInfo.swift; sourceTree = "<group>"; };
+		807486AF2AF13F8400DDBBDE /* DeckStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +91,21 @@
 		807486A22AF0EF0D00DDBBDE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				807486A52AF0EF6E00DDBBDE /* ShipType.swift */,
+				807486B12AF13FD500DDBBDE /* ShipModels */,
 				807486AB2AF0F1B500DDBBDE /* Dimensions.swift */,
-				807486A02AF0AA3100DDBBDE /* Models.swift */,
+				807486A02AF0AA3100DDBBDE /* GameMode.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		807486B12AF13FD500DDBBDE /* ShipModels */ = {
+			isa = PBXGroup;
+			children = (
+				807486A52AF0EF6E00DDBBDE /* ShipType.swift */,
+				807486AD2AF13EC900DDBBDE /* DeckInfo.swift */,
+				807486AF2AF13F8400DDBBDE /* DeckStatus.swift */,
+			);
+			path = ShipModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +172,11 @@
 				807486842AEE141500DDBBDE /* ConsoleIO.swift in Sources */,
 				807486AC2AF0F1B500DDBBDE /* Dimensions.swift in Sources */,
 				807486862AEE16FE00DDBBDE /* Game.swift in Sources */,
+				807486AE2AF13ECA00DDBBDE /* DeckInfo.swift in Sources */,
 				807486A42AF0EF2000DDBBDE /* Player.swift in Sources */,
 				807486A82AF0EFA300DDBBDE /* Ship.swift in Sources */,
-				807486A12AF0AA3100DDBBDE /* Models.swift in Sources */,
+				807486A12AF0AA3100DDBBDE /* GameMode.swift in Sources */,
+				807486B02AF13F8400DDBBDE /* DeckStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

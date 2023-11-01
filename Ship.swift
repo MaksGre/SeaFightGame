@@ -7,14 +7,20 @@
 
 final class Ship {
 
+    // Public properties
+    let deckInfo: [DeckInfo]
+
     // Private properties
     private let type: ShipType
-    private let locations: [Dimensions]
 
     // MARK: - Initialization
 
-    init(type: ShipType, locations: [Dimensions]) {
+    init(type: ShipType, decksInfo: [DeckInfo]) {
         self.type = type
-        self.locations = locations
+        self.deckInfo = decksInfo
     }
+
+    // MARK: - Public
+
+    
 }
