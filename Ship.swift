@@ -19,8 +19,4 @@ final class Ship {
         self.type = type
         self.deckInfo = decksInfo
     }
-
-    // MARK: - Public
-
-    
 }

@@ -23,8 +23,8 @@ enum Constants {
 final class Game {
 
     // Private properties
-    private var mode: GameMode = .namePlayer1
     private let consoleIO = ConsoleIO()
+    private var mode: GameMode = .namePlayer1
     private var player: Player?
     private var opponent: Player?
     private var player1: Player?

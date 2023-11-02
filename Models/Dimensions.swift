@@ -13,6 +13,7 @@ struct Dimensions {
 extension Dimensions {
 
     static func convertCoordinates(_ coordinates: String) -> Dimensions? {
+        let coordinates = coordinates.lowercased()
         guard !coordinates.isEmpty, coordinates.count < 3 else { return nil }
         let coordinatesMapped = coordinates.map { $0 }
         let unit1Char = coordinatesMapped[0]
