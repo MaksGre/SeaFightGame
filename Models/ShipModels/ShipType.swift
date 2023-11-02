@@ -21,15 +21,6 @@ extension ShipType {
         }
     }
 
-    var size: Int {
-        switch self {
-        case .oneDeck:
-            return 1
-        case .twoDeck:
-            return 2
-        }
-    }
-
     var quantity: Int {
         switch self {
         case .oneDeck:
