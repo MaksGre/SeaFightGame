@@ -13,12 +13,12 @@ private extension String {
 }
 
 enum GameMode {
-    case name1
-    case ships1
-    case name2
-    case ships2
-    case player1
-    case player2
+    case namePlayer1
+    case shipsPlayer1
+    case namePlayer2
+    case shipsPlayer2
+    case turnPlayer1
+    case turnPlayer2
     case victory
 }
 
@@ -26,17 +26,17 @@ extension GameMode {
 
     var description: String {
         switch self {
-        case .name1:
+        case .namePlayer1:
             return .playersName
-        case .ships1:
+        case .shipsPlayer1:
             return .playerShipPlacement
-        case .name2:
+        case .namePlayer2:
             return .playersName
-        case .ships2:
+        case .shipsPlayer2:
             return .playerShipPlacement
-        case .player1:
+        case .turnPlayer1:
             return .playersTurn
-        case .player2:
+        case .turnPlayer2:
             return .playersTurn
         case .victory:
             return .playerWins
@@ -45,17 +45,17 @@ extension GameMode {
 
     mutating func next() {
         switch self {
-        case .name1:
-            self = .ships1
-        case .ships1:
-            self = .name2
-        case .name2:
-            self = .ships2
-        case .ships2:
-            self = .player1
-        case .player1:
-            self = .player2
-        case .player2:
+        case .namePlayer1:
+            self = .shipsPlayer1
+        case .shipsPlayer1:
+            self = .namePlayer2
+        case .namePlayer2:
+            self = .shipsPlayer2
+        case .shipsPlayer2:
+            self = .turnPlayer1
+        case .turnPlayer1:
+            self = .turnPlayer2
+        case .turnPlayer2:
             self = .victory
         case .victory:
             self = .victory
@@ -63,7 +63,7 @@ extension GameMode {
     }
 
     mutating func setPlayer1() {
-        self = .player1
+        self = .turnPlayer1
     }
 
     mutating func setVictory() {

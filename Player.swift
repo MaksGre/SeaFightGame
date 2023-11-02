@@ -54,4 +54,10 @@ final class Player {
     func checkDeckUnderFire(location: Dimensions) -> Bool {
         !checkLocationIsNotBusy(location, markLocation: true)
     }
+
+    func checkShipsAfloat() -> Bool {
+        ships
+            .flatMap { $0.deckInfo }
+            .first { $0.status == .normal } == nil ? false : true
+    }
 }
